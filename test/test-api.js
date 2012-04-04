@@ -1,5 +1,5 @@
-
-var request = require('request')
+var request = require('request'), 
+should = require('should');
 
 
 var host = process.argv[2]
@@ -14,8 +14,14 @@ var sync_base = base+'/sync'
 
 
 var printres = function(err,res,body) {
-  body = 'string'==typeof(body)?JSON.parse(body):body
-  console.log(err+' '+res.statusCode+' '+JSON.stringify(body))
+  should.not.exist(err);
+  console.log(body);
+  /*if('string'==typeof(body))
+  {
+   body.should.be.json;
+  } */
+  //body = 'string'==typeof(body)?JSON.parse(body):body
+  //console.log(err+' '+res.statusCode+' '+JSON.stringify(body))
 }
 
 
@@ -25,8 +31,9 @@ function test() {
 
 ;request.post({uri:rest_base+'/ac1/coll1/foo=bar',json:{b:20}}, function(err,res,body) {
   printres(err,res,body)
-  var item = body
-
+  var retval = 'string'==typeof(body)?JSON.parse(body):body
+  retval.b.should.equal(20);
+  
 ;request.post({uri:rest_base+'/ac1/coll1/foo=bar',json:{a:10}}, function(err,res,body) {
   printres(err,res,body)
   var item = body

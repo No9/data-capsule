@@ -7,6 +7,7 @@
   "author": "Richard Rodger <richard@ricebridge.com> (http://richardrodger.com/)",
   "contributors": [
     "Richard Rodger <richard@ricebridge.com> (http://richardrodger.com/)"
+    "Anthony Whalley <antonwhalley@number9systems.com> (http://github.com/No9/)"
   ],
   "dependencies": {
     "dispatch": "*",
