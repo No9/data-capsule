@@ -5,7 +5,6 @@ var Db = require('mongodb').Db,
 
 var client = new Db('test', new Server("127.0.0.1", 27017, {})),
     test = function (err, collection) {
-      
       console.log('Insert Test');
       collection.insert({a:2}, function(err, docs) {
 
