@@ -26,6 +26,7 @@ exports.load = function(filepath) {
     exports.Host = config.capsuleHost || 'localhost';
     exports.externalHost = config.capsuleHost || 'localhost';
     exports.Port = config.capsulePort || 8042;
+    exports.CapsuleType = config.capsule;
     console.log("configured port : " + exports.Port)
     if(config.externalPort)
         exports.externalPort = config.externalPort;

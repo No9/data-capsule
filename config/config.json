@@ -1,6 +1,7 @@
 {
     "capsuleHost" : "localhost",
     "capsulePort" : 3001,
+    "capsule" : "inmem",
     "scannedDirs" : [
         "Apps",
         "Collections",
