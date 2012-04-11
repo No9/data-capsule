@@ -1,10 +1,7 @@
-Data-Capsule
-============
-	A sync framework implementation by 
-	[NearForm](http://www.nearform.com/)
+#Data-Capsule
+A sync framework implementation by [NearForm](http://www.nearform.com/)
 
-Dependencies
-============
+##Dependencies
 
 	npm install connect
 	npm install node-uuid
