@@ -12,9 +12,7 @@ module.exports = function InmemCapsule( opt ) {
   self.items = []
   self.index = {}
   self.v = -1
-
   self.history = []
-
 
   self.load = function( query, cb ) {
     var id = query
@@ -85,7 +83,7 @@ module.exports = function InmemCapsule( opt ) {
       var match = true
       for( var p in query ) {
         var v = query[p]
-
+        logger.log('info', 'self.list query:' + query[p]);
         match = (item[p] == v)
         if( !match ) break;
       }
@@ -96,7 +94,6 @@ module.exports = function InmemCapsule( opt ) {
     }
     cb(null,items)
   }
-
 
   self.meta = function( cb ) {
     cb(null,{version:self.v,length:self.items.length,acc:acc,coll:coll,spec:spec})

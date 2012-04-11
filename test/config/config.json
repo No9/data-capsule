@@ -1,0 +1,21 @@
+{
+    "capsuleHost" : "localhost",
+    "capsulePort" : 3001,
+    "capsule" : "inmem",
+    "scannedDirs" : [
+        "Apps",
+        "Collections",
+        "Connectors"
+        ],
+    "mongo" : {
+        "dataDir": "mongodata",
+        "host": "localhost",
+        "port": 27018
+    },
+    "logging": {
+        "level": "info",
+        "console": true,
+        "file": "capsule.out",
+        "maxsize": 33554432
+    }
+}
