@@ -1,6 +1,7 @@
 Data-Capsule
 ============
-	A sync framework implementation by [NearForm](http://www.nearform.com/)
+	A sync framework implementation by 
+	[NearForm](http://www.nearform.com/)
 
 Dependencies
 ============
